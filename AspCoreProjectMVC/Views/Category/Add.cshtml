@@ -1,0 +1,36 @@
+﻿@model CategoryAddModel
+
+
+
+<div class="album py-1 bg-light">
+    <div class="container">
+
+        <div class="h-100 d-flex justify-content-center align-items-center vertical-center mt-5 mb-5">
+            <div class="card" style="width: 40%; border-radius: 20px;">
+                <div class="card-header text-center" bg-secondary">
+                    <h5 class="mt-1">Customer Add</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-controller="Category" asp-action="Add">
+                        <div class="form-group">
+                            <label class=>Name</label>
+                            <input type="text" class="form-control" asp-for="@Model.CategoryName">
+                            <span asp-validation-for="CategoryName"></span>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success mt-2">Add</button>
+                            <button type="reset" class="btn btn-info mt-2 ml-1">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+

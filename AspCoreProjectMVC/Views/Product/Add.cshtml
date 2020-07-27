@@ -1,0 +1,59 @@
+﻿@model ProductAddModel
+
+
+
+<div class="album py-1 bg-light">
+    <div class="container">
+
+        <div class="h-100 d-flex justify-content-center align-items-center vertical-center mt-5 mb-5">
+            <div class="card" style="width: 40%; border-radius: 20px;">
+                <div class="card-header text-center" bg-secondary">
+                    <h5 class="mt-1">Customer Add</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-controller="Product" asp-action="Add">
+                        <div class="form-group">
+                            <label class=>Product Name</label>
+                            <input type="text" class="form-control" asp-for="Product">
+                            <span asp-validation-for="Product"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select class="form-control" asp-for="@Model.CategoryID" asp-items="@Model.CategorySelectList" value="@Model.CategoryID"></select>
+                            <span asp-validation-for="CategoryID"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Company</label>
+                            <select class="form-control" asp-for="@Model.CompanyID" asp-items="@Model.CompanySelecList" value="@Model.CompanyID"></select>
+                            <span asp-validation-for="CompanyID"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="number" min="0.00" step="any" class="form-control" asp-for="Price">
+                            <span asp-validation-for="Price"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Quantity Per Unit</label>
+                            <input type="text" class="form-control" asp-for="QuantityPerUnit">
+                            <span asp-validation-for="QuantityPerUnit"></span>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success mt-2">Add</button>
+                            <button type="reset" class="btn btn-info mt-2 ml-1">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+

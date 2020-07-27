@@ -1,0 +1,53 @@
+﻿
+@model ProductListModel
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>Ürünler Sayfası</h1>
+        <p>Ürünleri Görüntüleyebilir, Ekleme Silme ve Güncelleme İşlemlerinizi Gerçekleştirebilirsiniz.</p>
+        <a style="border-radius: 5px" href="~/Product/Add" class="btn btn-primary my-2">Product Add</a>
+    </div>
+</section>
+
+<div class="album py-1 bg-light">
+    <div class="container-fluid">
+        <table class="table table-hover table-striped table-sm" id="CustomerTable">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="row" style="text-align: center">ID</th>
+                    <th scope="row" style="text-align: center">Product</th>
+                    <th scope="row" style="text-align: center">Category</th>
+                    <th scope="row" style="text-align: center">Company</th>
+                    <th scope="row" style="text-align: center">Price</th>
+                    <th scope="row" style="text-align: center">QuantityPerUnit</th>
+                    <th scope="row" style="text-align: center">Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model.ProductList)
+                {
+
+                    <tr>
+
+                        <td style="text-align: center; ">@product.ID</td>
+                        <td style="text-align: center;">@product.Product</td>
+                        <td style="text-align: center; ">@product.Category</td>
+                        <td style="text-align: center; ">@product.Company</td>
+                        <td style="text-align: center; ">@product.Price</td>
+                        <td style="text-align: center; ">@product.QuantityPerUnit</td>
+                        <td style="text-align: center;">
+                            <a style="border-radius: 5px;" href="/Product/Delete/@product.ID" class="btn btn-sm btn-danger py-0 CustomerDelete">Delete</a>
+
+                            <a style="border-radius: 5px;" href="/Product/Update/@product.ID" class="btn btn-sm btn-primary py-0 mr-1">Update</a>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+

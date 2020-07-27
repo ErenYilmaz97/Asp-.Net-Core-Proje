@@ -1,0 +1,63 @@
+﻿@model ProductAddModel
+
+<div class="album py-1 bg-light">
+    <div class="container">
+
+        <div class="h-100 d-flex justify-content-center align-items-center vertical-center mt-5 mb-5">
+            <div class="card" style="width: 40%; border-radius: 20px;">
+                <div class="card-header text-center" bg-secondary">
+                    <h5 class="mt-1">Product Add</h5>
+
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-controller="Product" asp-action="Update">
+
+                        <input type="hidden" class="form-control" asp-for="@Model.ID" value="@Model.ID">
+                        <input type="hidden" asp-for="@Model.CategorySelectList" asp-items="@Model.CategorySelectList"></input>
+                        <input type="hidden" asp-for="@Model.CompanySelecList" asp-items="@Model.CompanySelecList"></input>
+
+                        <div class="form-group">
+                            <label>Product Name</label>
+                            <input type="text" class="form-control" asp-for="@Model.Product" value="@Model.Product">
+                            <span asp-validation-for="Product"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select class="form-control" asp-for="CategoryID" asp-items="@Model.CategorySelectList" value="@Model.CategoryID"></select>
+                            <span asp-validation-for="CategoryID"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Company</label>
+                            <select class="form-control" asp-for="CompanyID" asp-items="@Model.CompanySelecList" value="@Model.CompanyID"></select>
+                            <span asp-validation-for="CompanyID"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="number" min="0.00" step="0.01" class="form-control" asp-for="@Model.Price" value="@Model.Price">
+                            <span asp-validation-for="Price"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Quantity Per Unit</label>
+                            <input type="text" class="form-control" asp-for="@Model.QuantityPerUnit" value="@Model.QuantityPerUnit">
+                            <span asp-validation-for="QuantityPerUnit"></span>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success mt-2">Update</button>
+                            <button type="reset" class="btn btn-info mt-2 ml-1">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+

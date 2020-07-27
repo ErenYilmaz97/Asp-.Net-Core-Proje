@@ -1,0 +1,51 @@
+﻿@using AspCoreProject.Entity
+@model AspCoreProjectMVC.Models.CustomerListModel;
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>Müşteri Sayfası</h1>
+        <p>Müşterileri Görüntüleyebilir, Ekleme Silme ve Güncelleme İşlemlerinizi Gerçekleştirebilirsiniz.</p>
+        <a style="border-radius: 5px" href="~/Customer/Add" class="btn btn-primary my-2">Customer Add</a>
+    </div>
+</section>
+
+<div class="album py-1 bg-light">
+    <div class="container-fluid">
+        <table class="table table-hover table-striped table-sm" id="CustomerTable">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="row" style="text-align: center">Name</th>
+                <th scope="row" style="text-align: center">Lastname</th>
+                <th scope="row" style="text-align: center">City</th>
+                <th scope="row" style="text-align: center">Country</th>
+                <th scope="row" style="text-align: center">Adress</th>
+                <th scope="row" style="text-align: center">Phone</th>
+                <th scope="row" style="text-align: center">Options</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var customer in Model.CustomerList)
+            {
+               
+                    <tr>
+                       
+                        <td style="text-align: center; ">@customer.Name</td>
+                        <td style="text-align: center;">@customer.Lastname</td>
+                        <td style="text-align: center; ">@customer.City</td>
+                        <td style="text-align: center; ">@customer.Country</td>
+                        <td style="text-align: center; ">@customer.Adress</td>
+                        <td style="text-align: center; ">@customer.Phone</td>
+                        <td style="text-align: center;">
+                            <a style="border-radius: 5px;" href="/Customer/Delete/@customer.ID" class="btn btn-sm btn-danger py-0 CustomerDelete">Delete</a>
+
+                            <a style="border-radius: 5px;" href="/Customer/Update/@customer.ID" class="btn btn-sm btn-primary py-0 mr-1">Update</a>
+                        </td>
+                    </tr>
+                
+            }
+            </tbody>
+        </table>
+        </div>
+</div>
+
+

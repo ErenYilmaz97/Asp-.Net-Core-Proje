@@ -1,0 +1,44 @@
+﻿@model CategoryListModel
+
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>Kategori Sayfası</h1>
+        <p>Kategorileri Görüntüleyebilir, Ekleme Silme ve Güncelleme İşlemlerinizi Gerçekleştirebilirsiniz.</p>
+        <a style="border-radius: 5px" href="~/Category/Add" class="btn btn-primary my-2">Category Add</a>
+    </div>
+</section>
+
+<div class="album py-1 bg-light">
+    <div class="container-fluid">
+        <table class="table table-hover table-striped table-sm">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="row" style="text-align: center">ID</th>
+                    <th scope="row" style="text-align: center">Category</th>
+                    <th scope="row" style="text-align: center">Options</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var category in Model.categoryList)
+                {
+
+                    <tr>
+
+                        <td style="text-align: center; ">@category.CategoryID</td>
+                        <td style="text-align: center;">@category.Category</td>
+                        
+                        
+                        <td style="text-align: center;">
+                            <a style="border-radius: 5px;" href="~/Category/Delete/@category.CategoryID" class="btn btn-sm btn-danger py-0">Delete</a>
+                            <a style="border-radius: 5px;" href="~/Category/Update/@category.CategoryID" class="btn btn-sm btn-primary py-0 mr-1">Update</a>
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,15 @@
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\bin\Debug\netcoreapp3.1\AspCoreProject.DataAccess.deps.json
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\bin\Debug\netcoreapp3.1\AspCoreProject.DataAccess.dll
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\bin\Debug\netcoreapp3.1\AspCoreProject.DataAccess.pdb
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\obj\Debug\netcoreapp3.1\AspCoreProject.DataAccess.csprojAssemblyReference.cache
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\obj\Debug\netcoreapp3.1\AspCoreProject.DataAccess.AssemblyInfoInputs.cache
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\obj\Debug\netcoreapp3.1\AspCoreProject.DataAccess.AssemblyInfo.cs
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\obj\Debug\netcoreapp3.1\AspCoreProject.DataAccess.dll
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\obj\Debug\netcoreapp3.1\AspCoreProject.DataAccess.pdb
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\bin\Debug\netcoreapp3.1\AspCoreProject.Entity.dll
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\bin\Debug\netcoreapp3.1\AspCoreProject.Entity.pdb
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\obj\Debug\netcoreapp3.1\AspCoreProject.DataAccess.csproj.CopyComplete
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\bin\Debug\netcoreapp3.1\AspCoreProject.DataAccess.runtimeconfig.json
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\bin\Debug\netcoreapp3.1\AspCoreProject.DataAccess.runtimeconfig.dev.json
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\obj\Debug\netcoreapp3.1\AspCoreProject.DataAccess.genruntimeconfig.cache
+C:\Users\eren_\Desktop\PROJELER\AspCoreProject\AspCoreProject.DataAccess\obj\Debug\netcoreapp3.1\AspCoreProject.DataAccess.csproj.CoreCompileInputs.cache

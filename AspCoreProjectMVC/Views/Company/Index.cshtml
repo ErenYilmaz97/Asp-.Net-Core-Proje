@@ -1,0 +1,45 @@
+﻿@model CompanyListModel
+
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>Firma Sayfası</h1>
+        <p>Firmaları Görüntüleyebilir, Ekleme Silme ve Güncelleme İşlemlerinizi Gerçekleştirebilirsiniz.</p>
+        <a style="border-radius: 5px" href="~/Company/Add" class="btn btn-primary my-2">Company Add</a>
+    </div>
+</section>
+
+<div class="album py-1 bg-light">
+    <div class="container-fluid">
+        <table class="table table-hover table-striped table-sm">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="row" style="text-align: center">ID</th>
+                <th scope="row" style="text-align: center">Company</th>
+                <th scope="row" style="text-align: center">Options</th>
+                   
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var company in Model.CompanyList)
+            {
+
+                <tr>
+
+                    <td style="text-align: center; ">@company.CompanyID</td>
+                    <td style="text-align: center;">@company.Company</td>
+                        
+                        
+                    <td style="text-align: center;">
+                        <a style="border-radius: 5px;" href="~/Company/Delete/@company.CompanyID" class="btn btn-sm btn-danger py-0">Delete</a>
+                        <a style="border-radius: 5px;" href="~/Company/Update/@company.CompanyID" class="btn btn-sm btn-primary py-0 mr-1">Update</a>
+                    </td>
+                </tr>
+
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
